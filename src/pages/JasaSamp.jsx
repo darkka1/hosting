@@ -1,21 +1,31 @@
-import { jasaSamp } from "../data/jasaSamp";
-import { sendToWhatsApp } from "../utils/whatsapp";
+import ProductCard from "../components/ProductCard";
 
 export default function JasaSamp() {
+  const jasaSampPackage = {
+    title: "Jasa SA:MP",
+    price: "",
+    desc: `
+1. Setup server
+2. Config gamemode
+3. Install plugin
+4. Backup rutin
+5. Maintenance mingguan
+6. Custom script
+7. Optimasi performa
+8. Support 24/7
+9. Migrasi server lama
+10. Konsultasi teknis
+    `
+  };
+
   return (
     <div className="p-10">
-      <h1 className="text-4xl font-bold text-metallic">{jasaSamp.title}</h1>
-
-      <ul className="mt-5 list-disc ml-5 text-gray-300">
-        {jasaSamp.details.map((d, i) => <li key={i}>{d}</li>)}
-      </ul>
-
-      <button
-        onClick={() => sendToWhatsApp(`Saya Mau Pesan ${jasaSamp.title}`)}
-        className="mt-5 bg-metallic text-black px-5 py-2 rounded-lg hover:bg-white"
-      >
-        Pesan Sekarang
-      </button>
+      <h1 className="text-4xl font-bold text-neonGreen drop-shadow-neon animate-glow">
+        Jasa SA:MP
+      </h1>
+      <div className="mt-10 max-w-2xl mx-auto">
+        <ProductCard {...jasaSampPackage} />
+      </div>
     </div>
   );
 }

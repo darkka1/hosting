@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -15,7 +14,6 @@ export default function App() {
   return (
     <BrowserRouter>
       <Navbar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bot" element={<BotHosting />} />
@@ -25,7 +23,6 @@ export default function App() {
         <Route path="/reseller-panel" element={<ResellerPanel />} />
         <Route path="/jasa-samp" element={<JasaSamp />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );
